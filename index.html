@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular Presentation Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+
+    <div class="presentation-container">
+        
+        <!-- Slide 1: Epic Nature -->
+        <!-- Variables dictate image and how it crops on mobile vs desktop -->
+        <section class="slide align-center" 
+                 style="--bg-img: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); 
+                        --bg-pos-desktop: center center; 
+                        --bg-pos-mobile: 65% center;">
+            <div class="slide-content bg-box-dark">
+                <h1>Explore the Unknown</h1>
+                <p>Welcome to our modular presentation. This section uses a dark, semi-transparent frosted glass effect, perfectly centered for maximum impact. On mobile, the background shifts right to keep the peaks in view.</p>
+            </div>
+            
+            <div class="scroll-indicator">
+                Scroll Down
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </div>
+        </section>
+
+        <!-- Slide 2: Urban Architecture -->
+        <section class="slide align-middle-left" 
+                 style="--bg-img: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); 
+                        --bg-pos-desktop: center 30%; 
+                        --bg-pos-mobile: 85% center;">
+            <div class="slide-content bg-box-light">
+                <h2>Urban Modularity</h2>
+                <p>Aligned to the middle-left, this slide utilizes the `.bg-box-light` utility class. It provides excellent contrast against dark cityscapes while maintaining a clean, modern aesthetic. Notice the smooth fade-in animation as you snap to this slide.</p>
+            </div>
+        </section>
+
+        <!-- Slide 3: Workspace -->
+        <section class="slide align-bottom-right" 
+                 style="--bg-img: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); 
+                        --bg-pos-desktop: center bottom; 
+                        --bg-pos-mobile: center center;">
+            <div class="slide-content bg-box-transparent">
+                <h2>Seamless Integration</h2>
+                <p>Sometimes you don't want a background box at all. The `.bg-box-transparent` class relies entirely on CSS text-shadows to ensure readability against busy backgrounds. Pushed to the bottom-right via the alignment utilities.</p>
+            </div>
+        </section>
+
+        <!-- Slide 4: Abstract Gradient -->
+        <section class="slide align-top-left" 
+                 style="--bg-img: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); 
+                        --bg-pos-desktop: center center; 
+                        --bg-pos-mobile: 30% center;">
+            <div class="slide-content bg-box-dark">
+                <h2>Infinite Possibilities</h2>
+                <p>Mix and match background images, mobile crop points, alignment constraints, and box styles. With just a few HTML attributes, you can create an entirely unique presentation slide in seconds.</p>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
