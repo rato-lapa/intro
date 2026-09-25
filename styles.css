@@ -1,6 +1,18 @@
+/* Load Degular Variable from Adobe Typekit */
+@font-face {
+    font-family: 'Degular Variable';
+    src: url('https://use.typekit.net/af/494550/0000000000000000774b907b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3.woff2') format('woff2');
+    font-weight: 100 900; /* Supports full variable weight range */
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
-    --font-main: 'Inter', sans-serif;
+    --font-main: 'Degular Variable', sans-serif;
     --transition-speed: 0.8s;
+    --accent-color: rgb(255, 255, 0);
+    --dark-color: rgb(0, 0, 0);
+    --light-color: rgb(255, 255, 255);
 }
 
 html, body {
@@ -11,7 +23,7 @@ html, body {
     font-family: var(--font-main);
     /* Hide body scrollbar to rely on the presentation container */
     overflow: hidden; 
-    background-color: #000;
+    background-color: var(--dark-color);
 }
 
 .presentation-container {
@@ -68,7 +80,7 @@ html, body {
 .slide-content {
     max-width: 650px;
     padding: 3rem;
-    border-radius: 16px;
+    border-radius: 0px;
     z-index: 10;
     
     /* Initial Animation State */
@@ -86,7 +98,7 @@ html, body {
 
 .bg-box-dark {
     background: rgba(15, 23, 42, 0.7); /* Deep dark blue/gray */
-    color: #f8fafc;
+    color: var(--light-color);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -103,10 +115,9 @@ html, body {
 }
 
 .bg-box-transparent {
-    background: transparent;
-    color: #ffffff;
-    padding: 1rem 0; /* Less padding since no box boundaries */
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 4px 20px rgba(0,0,0,0.6);
+    background: rgba(from var(--accent-color) r g b / 0.85); /* Transparent accent color */
+    color: var(--dark-color);
+    padding: 2rem; /* Less padding since no box boundaries */
 }
 
 h1, h2 {
@@ -138,7 +149,7 @@ p {
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: var(--light-color);
     opacity: 0.7;
     animation: bounce 2s infinite;
     display: flex;
